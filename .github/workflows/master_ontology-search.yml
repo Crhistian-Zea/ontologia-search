@@ -4,9 +4,9 @@
 name: Build and deploy ASP.Net Core app to Azure Web App - ontology-search
 
 env:
-  AZURE_WEBAPP_NAME: ontologia-search   # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '6'                 # set this to the .NET Core version to use
+  AZURE_WEBAPP_NAME: ontology-search   
+  AZURE_WEBAPP_PACKAGE_PATH: '.'
+  DOTNET_VERSION: '6'
 
 on:
   push:
