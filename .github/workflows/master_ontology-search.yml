@@ -55,4 +55,4 @@ jobs:
           app-name: 'ontology-search'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F32F4D1ED53D40008E7E69AD3800DB42 }}
-          package: ${{env.AZURE_WEBAPP_PACKAGE_PATH}}
+          package: .
