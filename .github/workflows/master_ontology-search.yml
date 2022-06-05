@@ -3,6 +3,11 @@
 
 name: Build and deploy ASP.Net Core app to Azure Web App - ontology-search
 
+env:
+  AZURE_WEBAPP_NAME: ontologia-search   # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '6'                 # set this to the .NET Core version to use
+
 on:
   push:
     branches:
@@ -54,4 +59,4 @@ jobs:
           app-name: 'ontology-search'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F32F4D1ED53D40008E7E69AD3800DB42 }}
-          package: ${{env.DOTNET_ROOT}}/myapp
+          package: ${{env.AZURE_WEBAPP_PACKAGE_PATH}}
